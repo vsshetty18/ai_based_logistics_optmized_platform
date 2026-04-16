@@ -9,7 +9,7 @@ function App() {
 
   const handleSubmit = async () => {
     const res = await axios.post(
-      "https://YOUR-BACKEND.onrender.com/predict",
+      "https://ai-based-logistics-optmized-platform.onrender.com/predict",
       { distance, traffic, weather }
     );
     setResult(res.data);
