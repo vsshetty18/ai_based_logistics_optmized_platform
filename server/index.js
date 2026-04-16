@@ -10,7 +10,6 @@ app.post("/predict", (req, res) => {
 
   let score = 0;
 
-  // Simple AI logic
   if (distance > 300) score += 30;
   if (traffic === "high") score += 40;
   if (weather === "bad") score += 30;
@@ -29,4 +28,6 @@ app.get("/", (req, res) => {
   res.send("Logistics API Running");
 });
 
-app.listen(5000, () => console.log("Server running on port 5000"));
+app.listen(process.env.PORT || 10000, () =>
+  console.log("Server running")
+);
